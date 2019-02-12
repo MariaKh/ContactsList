@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ContactsList</string>
+    <string name="search_hint">Find friends</string>
+</resources>

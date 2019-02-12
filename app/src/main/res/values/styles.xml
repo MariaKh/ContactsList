@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SearchFieldStyle">
+        <item name="android:padding">@dimen/search_field_padding</item>
+        <item name="android:hint">@string/search_hint</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:background">@drawable/bg_search</item>
+        <item name="android:layout_margin">@dimen/search_field_margin</item>
+        <item name="android:drawableRight">@android:drawable/ic_menu_search</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:lines">1</item>
+    </style>
+</resources>

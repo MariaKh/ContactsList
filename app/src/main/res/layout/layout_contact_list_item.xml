@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/contact_list_item_height">
+
+    <ImageView
+        android:id="@+id/contact_status_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/contact_list_item_status_margin"
+        android:layout_marginEnd="@dimen/contact_list_item_status_margin"
+        android:layout_marginTop="@dimen/contact_list_item_name_top_margin"/>
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/contact_list_item_name_top_margin"
+        android:layout_toEndOf="@id/contact_status_icon"
+        android:layout_toStartOf="@id/contact_avatar"/>
+
+    <TextView
+        android:id="@+id/contact_status_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_name"
+        android:layout_toEndOf="@id/contact_status_icon"
+        android:layout_toStartOf="@id/contact_avatar"
+        android:layout_marginTop="@dimen/contact_list_item_status_message_top_margin"/>
+
+
+    <ImageView
+        android:id="@+id/contact_avatar"
+        android:layout_width="@dimen/contact_list_item_height"
+        android:layout_height="@dimen/contact_list_item_avatar_width"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/contacts_list_avatar_unknown"/>
+</RelativeLayout>

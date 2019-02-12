@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="contact_list_item_height">64dp</dimen>
+    <dimen name="contact_list_item_avatar_width">@dimen/contact_list_item_height</dimen>
+    <dimen name="contact_list_item_status_margin">16dp</dimen>
+    <dimen name="contact_list_item_name_top_margin">8dp</dimen>
+    <dimen name="contact_list_item_status_message_top_margin">8dp</dimen>
+    <dimen name="search_field_padding">16dp</dimen>
+    <dimen name="search_field_margin">16dp</dimen>
+    <dimen name="search_field_bg_corner_radius">4dp</dimen>
+    <dimen name="contacts_item_header_padding">8dp</dimen>
+</resources>
