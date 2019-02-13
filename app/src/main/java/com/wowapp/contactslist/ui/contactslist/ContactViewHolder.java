@@ -16,21 +16,21 @@ import static com.wowapp.contactslist.domain.models.AnnotationStatus.CALL;
 import static com.wowapp.contactslist.domain.models.AnnotationStatus.OFFLINE;
 import static com.wowapp.contactslist.domain.models.AnnotationStatus.ONLINE;
 
-public class ContactViewHolder extends ChildViewHolder {
+class ContactViewHolder extends ChildViewHolder {
 
     private static final String NAME_FORMAT = "%s %s";
     private TextView name;
     private ImageView status;
     private TextView statusMessage;
 
-    public ContactViewHolder(@NonNull View itemView) {
+    ContactViewHolder(@NonNull View itemView) {
         super(itemView);
         name = itemView.findViewById(R.id.contact_name);
         status = itemView.findViewById(R.id.contact_status_icon);
         statusMessage = itemView.findViewById(R.id.contact_status_message);
     }
 
-    public void bind(@NonNull Contact contact) {
+    void bind(@NonNull Contact contact) {
         name.setText(String.format(NAME_FORMAT, contact.getFirstName(), contact.getLastName()));
         int statusIconId = R.drawable.contacts_list_status_away;
         switch (contact.getStatusIcon()) {
@@ -44,7 +44,7 @@ public class ContactViewHolder extends ChildViewHolder {
                 statusIconId = R.drawable.contacts_list_status_busy;
                 break;
             case AWAY:
-               statusIconId = R.drawable.contacts_list_status_away;
+                statusIconId = R.drawable.contacts_list_status_away;
                 break;
             case CALL:
                 statusIconId = R.drawable.contacts_list_call_forward;
@@ -52,9 +52,9 @@ public class ContactViewHolder extends ChildViewHolder {
         }
         status.setImageResource(statusIconId);
         String message = contact.getStatusMessage();
-        if (!TextUtils.isEmpty(message)){
+        if (!TextUtils.isEmpty(message)) {
             statusMessage.setText(message);
-        }  else {
+        } else {
             statusMessage.setText(contact.getStatusIcon());
         }
     }

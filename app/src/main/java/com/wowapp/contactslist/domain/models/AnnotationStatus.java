@@ -1,6 +1,4 @@
 package com.wowapp.contactslist.domain.models;
-// Constants
-
 
 import android.support.annotation.StringDef;
 

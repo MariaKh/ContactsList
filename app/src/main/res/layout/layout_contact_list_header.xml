@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/group_name"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/darker_gray"
-    android:drawableStart="@android:drawable/arrow_down_float"
-    android:textStyle="bold"
-    android:padding="@dimen/contacts_item_header_padding"
-    android:drawablePadding="@dimen/contacts_item_header_padding"
-    android:textColor="@android:color/black" />
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/group_header_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/contacts_item_header_padding"
+        android:src="@android:drawable/arrow_down_float" />
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/contacts_item_header_padding"
+        android:padding="@dimen/contacts_item_header_padding"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+</LinearLayout>

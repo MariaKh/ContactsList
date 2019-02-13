@@ -60,7 +60,7 @@ public class ContactsAdapter extends ExpandableRecyclerAdapter<Group, Contact, G
     public void updateList(List<Group> contacts, String filter) {
         this.groups = contacts;
         setParentList(contacts, true);
-        if (!contacts.isEmpty()&& !TextUtils.isEmpty(filter)) {
+        if (!contacts.isEmpty() && !TextUtils.isEmpty(filter)) {
             getFilter().filter(filter);
         }
     }
@@ -78,7 +78,7 @@ public class ContactsAdapter extends ExpandableRecyclerAdapter<Group, Contact, G
             if (filterString.isEmpty()) {
                 results.values = groups;
                 results.count = groups.size();
-            }else {
+            } else {
                 final ArrayList<Group> filteredParentObjects = new ArrayList<>();
                 for (ExpandableWrapper<Group, Contact> expandableWrapper : generateFlattenedParentChildList(groups)) {
                     final ArrayList<Contact> filteredChildObjects = new ArrayList<>();
@@ -89,12 +89,10 @@ public class ContactsAdapter extends ExpandableRecyclerAdapter<Group, Contact, G
                                 filteredChildObjects.add(childObject);
                             }
                         }
-                    }
-                    if (filteredChildObjects.size() > 0) {
-                        final Group filteredParentObject = new Group();
-                        filteredParentObject.setGroupName(parentObject.getGroupName());
-                        filteredParentObject.setPeople(filteredChildObjects);
-                        filteredParentObjects.add(filteredParentObject);
+                        if (filteredChildObjects.size() > 0) {
+                            parentObject.setPeople(filteredChildObjects);
+                            filteredParentObjects.add(parentObject);
+                        }
                     }
                 }
                 results.values = filteredParentObjects;

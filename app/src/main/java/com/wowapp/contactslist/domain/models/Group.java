@@ -27,6 +27,6 @@ public class Group implements Parent<Contact> /*implements Parent*/ {
 
     @Override
     public boolean isInitiallyExpanded() {
-        return false;
+        return true;
     }
 }

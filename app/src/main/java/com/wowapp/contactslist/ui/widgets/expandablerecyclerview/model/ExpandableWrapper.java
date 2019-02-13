@@ -52,21 +52,6 @@ public class ExpandableWrapper<P extends Parent<C>, C> {
         return isWrappedParent;
     }
 
-    /**
-     * @return The initial expanded state of a parent
-     * @throws IllegalStateException If a parent isn't being wrapped
-     */
-    public boolean isParentInitiallyExpanded() {
-        if (!isWrappedParent) {
-            throw new IllegalStateException("Parent not wrapped");
-        }
-        return parent.isInitiallyExpanded();
-    }
-
-    /**
-     * @return The list of children of a parent
-     * @throws IllegalStateException If a parent isn't being wrapped
-     */
     public List<ExpandableWrapper<P, C>> getWrappedChildList() {
         if (!isWrappedParent) {
             throw new IllegalStateException("Parent not wrapped");
